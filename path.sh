@@ -13,7 +13,7 @@ customPath=(
   "/usr/local/bin"
 )
 
-for dir in ${(k)customPath[@]}
+for dir in ${customPath[@]}
 do
   if [ -d ${dir} ]; then
     PATH="${dir}:$PATH"
