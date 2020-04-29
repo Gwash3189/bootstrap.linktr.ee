@@ -25,6 +25,10 @@ if test ! $(which brew)
 then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+# Ensure non-super users can continue.
+sudo chown -R $(whoami) $(brew --prefix)/*
+
 # Install ZSH & set as default shell.
 brew install zsh || true
 chsh -s /bin/zsh || true
@@ -46,8 +50,8 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 echo "You are now running $(python -V)."
 
 # Install Ansible
-pip3 install -q --upgrade pip virtualenv virtualenvwrapper
-pip3 install -q ansible==${ansibleVersion} paramiko wheel
+pip3 install -q --upgrade --user pip virtualenv virtualenvwrapper
+pip3 install -q --user ansible==${ansibleVersion} paramiko wheel
 
 # ----------------------------------------
 # 4. Run Playbook
