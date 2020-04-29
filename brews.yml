@@ -1,0 +1,41 @@
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_installed_packages:
+# Command line tools.
+- awscli
+- bat
+- circleci
+- coreutils
+- curl
+- git
+- git-crypt
+- gpg
+- jq
+- mkcert
+- wget
+- zsh
+# Container tooling.
+- docker
+- docker-machine
+- docker-compose
+- kubectl
+- minikube
+- helm
+# Infrastructure as code tooling.
+- terraform
+- terragrunt
+- tflint
+# Javascript tooling.
+- node
+- yarn
+- nvm
+- pyenv
+  # Media tooling.
+- exiftool
+- imagemagick
+- jpeg
+- libpng
+- optipng
+- ffmpeg

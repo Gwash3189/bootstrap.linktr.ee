@@ -1,0 +1,18 @@
+homebrew_cask_accept_external_apps: true
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+# Web browsers
+- firefox
+- google-chrome
+
+# Team Tools.
+- harvest
+- slack
+- zoomus
+- 1password
+
+# Developer Tooling.
+- iterm2
+- virtualbox
+- vagrant
+- vagrant-manager

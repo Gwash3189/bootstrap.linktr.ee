@@ -1,0 +1,9 @@
+#!/usr/bin/env ansible-playbook
+- hosts: all
+  connection: local
+  vars_files:
+    - ./brews.yml
+    - ./casks.yml
+
+  roles:
+    - { role: homebrew, tags: [macos, homebrew] }
