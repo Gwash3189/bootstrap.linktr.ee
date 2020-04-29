@@ -49,10 +49,14 @@ pyenv install "${pythonVersion}"
 pyenv global "${pythonVersion}"
 
 # Ensure pyenv is initialized and set in zsh
+# @todo - Only echo this command into zshrc if it doesn't exist to prevent multiples on failed attempts.
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 source ~/.zshrc
 echo "You are now running $(python -V)."
 
+
+# @todo - Only echo this command into zshrc if it doesn't exist to prevent multiples on failed attempts.
+echo -e "PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
 # Install Ansible
 pip3 install -q --upgrade --user pip virtualenv virtualenvwrapper
 pip3 install -q --user ansible==${ansibleVersion} paramiko wheel
