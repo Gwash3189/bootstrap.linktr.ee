@@ -76,5 +76,5 @@ sudo spctl --master-disable
 ansible-galaxy install -r ./requirements.yml
 ansible-playbook playbook.yml
 
-# Ensure gatekeeper is disabled.
+# Ensure gatekeeper is enabled.
 sudo spctl --master-enable
