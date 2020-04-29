@@ -9,6 +9,7 @@ Hello and welcome! This repo is desiged to help you get up to speed with all of 
 In order to clone this repository there are some system dependencies you will need to proceed.
 
 ### Install Command Line Tools
+
 ```sh
 xcode-select --install
 ```
@@ -26,7 +27,7 @@ fi
 Run
 
 ```sh
-./get-started.sh
+./get-started.sh && ansible-playbook playbook.yml
 ```
 
-... That's it. 🎉
+On your first run of the Ansible playbook, you may be notified to adjust your Security & Privacy settings to allow for applications from developers such as Oracle (Virtualbox). Once you have allowed these applications, re-run the playbook with `ansible-playbook playbook.yml`.
