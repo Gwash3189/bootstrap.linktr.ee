@@ -68,4 +68,13 @@ then
     https://github.com/linktr-ee/bootstrap.linktr.ee/issues3
     "
 fi
+
+# Ensure gatekeeper is disabled.
+sudo spctl --master-disable
+
+# Run the playbook.
 ansible-galaxy install -r ./requirements.yml
+ansible-playbook playbook.yml
+
+# Ensure gatekeeper is disabled.
+sudo spctl --master-enable

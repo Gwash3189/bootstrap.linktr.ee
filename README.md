@@ -24,10 +24,4 @@ fi
 
 ## Setting Up
 
-Run
-
-```sh
-./get-started.sh && ansible-playbook playbook.yml
-```
-
-On your first run of the Ansible playbook, you may be notified to adjust your Security & Privacy settings to allow for applications from developers such as Oracle (Virtualbox). Once you have allowed these applications, re-run the playbook with `ansible-playbook playbook.yml`.
+Run `./get-started.sh` 🎉.
