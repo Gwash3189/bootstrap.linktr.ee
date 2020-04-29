@@ -33,6 +33,9 @@ sudo chown -R $(whoami) $(brew --prefix)/*
 brew install zsh || true
 chsh -s /bin/zsh || true
 
+# Update $PATH
+./path.sh
+
 # ----------------------------------------
 # 3. Install Python & Python Dependencies.
 # ----------------------------------------
@@ -47,6 +50,7 @@ pyenv global "${pythonVersion}"
 
 # Ensure pyenv is initialized and set in zsh
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+source ~/.zshrc
 echo "You are now running $(python -V)."
 
 # Install Ansible
