@@ -33,9 +33,6 @@ sudo chown -R $(whoami) $(brew --prefix)/*
 brew install zsh || true
 chsh -s /bin/zsh || true
 
-# Update $PATH
-./path.sh
-
 # ----------------------------------------
 # 3. Install Python & Python Dependencies.
 # ----------------------------------------
