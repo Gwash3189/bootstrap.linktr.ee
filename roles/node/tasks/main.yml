@@ -7,3 +7,13 @@
 
 # N - Node Version Manager
 - import_tasks : "./n.yml"
+
+- name: Install Required NodeJS Versions
+  command: "n install {{ item }}"
+  with_items: ['lts', '10', '12']
+
+- name: Use Node LTS
+  command: "n lts"
+
+- name: Clean Yarn Cache
+  command: yarn cache clean
