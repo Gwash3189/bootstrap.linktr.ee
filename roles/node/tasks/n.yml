@@ -1,0 +1,16 @@
+- name: Ensure `n` has a cache folder
+  file:
+    path: /usr/local/n
+    state: directory
+    mode: '0755'
+    owner: "{{ current_user }}"
+  become: true
+
+- name: Ensure we have ownership over node installation directories.
+  file:
+    path: "{{ item }}"
+    owner: "{{ current_user }}"
+    state: directory
+    mode: '0755'
+  with_items: ['/usr/local/bin', '/usr/local/lib', '/usr/local/include', '/usr/local/share']
+  become: true

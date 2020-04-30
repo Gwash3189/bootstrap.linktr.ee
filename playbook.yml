@@ -5,5 +5,16 @@
     - ./brews.yml
     - ./casks.yml
 
+  pre_tasks:
+    - name: Get the current user
+      become: false
+      local_action: command whoami
+      register: whoami
+
+    - name: Set the current user as a fact
+      set_fact:
+        current_user: "{{ whoami.stdout }}"
+
   roles:
     - { role: homebrew, tags: [macos, homebrew] }
+    - { role: node, tags: [nodejs, npm] }

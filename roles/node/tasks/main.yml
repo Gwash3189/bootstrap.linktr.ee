@@ -1,0 +1,8 @@
+---
+- name: Install global NPM packages.
+  npm:
+    name: "{{ item }}"
+    global: yes
+  with_items: "{{ npm_global_packages }}"
+
+- import_tasks : "./n.yml"
