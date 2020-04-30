@@ -31,8 +31,6 @@ homebrew_installed_packages:
 - tflint
 # Javascript tooling.
 - node
-- yarn
-- nvm
 - pyenv
   # Media tooling.
 - exiftool
