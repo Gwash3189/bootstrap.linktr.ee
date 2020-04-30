@@ -28,6 +28,7 @@ fi
 
 # Ensure non-super users can continue.
 sudo chown -R $(whoami) $(brew --prefix)/*
+chsh -s $(which zsh)
 
 # ----------------------------------------
 # 3. Install Python & Python Dependencies.
@@ -48,7 +49,6 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 # @todo - Only echo this command into zshrc if it doesn't exist to prevent multiples on failed attempts.
 echo -e "PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
 source ~/.zshrc
-echo "You are now running $(python -V)."
 
 # Install Ansible
 pip3 install -q --upgrade --user pip virtualenv virtualenvwrapper
@@ -74,3 +74,10 @@ ansible-playbook playbook.yml
 
 # Ensure gatekeeper is enabled.
 sudo spctl --master-enable
+
+
+# ----------------------------------------
+# 5. Get Started
+# ----------------------------------------
+open /Applications/Docker.app
+open /Applications/Slack.app
