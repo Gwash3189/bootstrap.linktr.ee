@@ -31,7 +31,10 @@ homebrew_installed_packages:
 # Javascript tooling.
 - node
 - pyenv
-  # Media tooling.
+# Database drivers
+- postgres
+- mysql
+# Media tooling.
 - exiftool
 - imagemagick
 - jpeg
