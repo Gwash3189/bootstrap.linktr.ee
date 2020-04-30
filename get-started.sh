@@ -29,10 +29,6 @@ fi
 # Ensure non-super users can continue.
 sudo chown -R $(whoami) $(brew --prefix)/*
 
-# Install ZSH & set as default shell.
-brew install zsh || true
-chsh -s /bin/zsh || true
-
 # ----------------------------------------
 # 3. Install Python & Python Dependencies.
 # ----------------------------------------
