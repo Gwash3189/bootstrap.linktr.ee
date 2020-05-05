@@ -12,7 +12,6 @@ update_shell() {
     echo "Adding '$shell_path' to /etc/shells"
     sudo sh -c "echo $shell_path >> /etc/shells"
   fi
-  chsh -s "$shell_path"
 }
 
 
